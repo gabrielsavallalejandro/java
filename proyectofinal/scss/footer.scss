@@ -1,0 +1,226 @@
+/*-----------ESTILOS GENERALES-----------*/
+footer{
+    background-color: #81467c ;
+    width: 100%;
+    border-top: solid white;
+    color: white;
+
+    .titulo__redes {
+        height: 30%;
+        font-family:'Times New Roman', Times, serif;
+    }
+
+    .parrafo__copyright{
+        height: 30%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .logo__wp{
+        transition: height 2s, widht 2s;
+        &:hover{
+            height: 40px;
+            width: 38px;
+        }
+    }
+    .logo__ig{
+        @extend .logo__wp;
+        grid-area: iglogo;
+        margin-right: 10px;
+        &:hover{
+            height: 40px;
+            width: 38px;
+        }
+    }
+}
+
+/*------------MEDIA QUERIES------------*/
+@media only screen and ( max-width: 600px){
+    footer{
+        height: 105px;
+        display: grid;
+        grid-template-columns: 1.5fr 1.5fr 0.5fr 0.5fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "copyright copyright none none" 
+                            "textor textor wplogo iglogo";
+        column-gap: 5px;
+
+        .titulo__redes {
+            font-size: 14.5px;
+            grid-area: textor;
+            align-self: flex-end;
+            justify-self: flex-end;
+            margin-bottom: 10px;
+        }
+
+        .parrafo__copyright{
+            font-size: 15px;
+            grid-area: copyright; 
+            align-self: flex-start;
+            justify-self: flex-start;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .logo__wp{
+            grid-area: wplogo;
+            align-self: flex-end;
+            justify-self: flex-end;
+        }
+        .logo__ig{
+            grid-area: iglogo;
+            align-self: flex-end;
+            justify-self: flex-start;
+            margin-right: 10px;
+        } 
+    }
+}
+
+@media only screen and ( min-width: 600px){
+    footer{
+        height: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 0.1fr 0.1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "copyright textor  wplogo iglogo";
+        column-gap: 10px;
+
+        .parrafo__copyright{
+            font-size: 15.5px;
+            grid-area: copyright; 
+            align-self: flex-end;
+            justify-self: flex-start;
+            margin-left: 10px;
+        }
+        .titulo__redes{
+            font-size: 15.5px;
+            grid-area: textor;
+            align-self: flex-end;
+            justify-self: flex-end;
+        }
+        .logo__wp{
+            grid-area: wplogo;
+            align-self: flex-end;
+            justify-self: center;
+        }
+        .logo__ig{
+            grid-area: iglogo;
+            align-self: flex-end;
+            justify-self: center;
+            margin-right: 10px;
+        }
+    }
+}
+
+@media only screen and ( min-width: 768px){
+    footer{
+        height: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 0.1fr 0.1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "copyright textor  wplogo iglogo";
+        column-gap: 10px;
+
+        .parrafo__copyright{
+            height: 30%;
+            width: 150px;
+            font-size: 13px;
+            grid-area: copyright; 
+            align-self: flex-end;
+            justify-self: flex-start;
+            margin-left: 10px;
+        }
+        .titulo__redes {
+            font-size: 20px;
+            grid-area: textor;
+            justify-self: flex-end;
+            align-self: flex-end;
+        }
+        .logo__wp{
+            grid-area: wplogo;
+            align-self: flex-end;
+            justify-self: center;
+        }
+        .logo__ig{
+            grid-area: iglogo;
+            align-self: flex-end;
+            justify-self: center;
+            margin-right: 11px;
+        }
+    }
+}
+
+@media only screen and ( min-width: 992px){
+    footer{
+        height: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 0.1fr 0.1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "copyright textor  wplogo iglogo";
+        column-gap: 10px;
+
+        .parrafo__copyright{
+            height: 30%;
+            width: 150px;
+            font-size: 13px;
+            grid-area: copyright; 
+            align-self: flex-end;
+            justify-self: flex-start;
+            margin-left: 10px;
+        }
+        .titulo__redes{
+            font-size: 20px;
+            grid-area: textor;
+            justify-self: flex-end;
+            align-self: flex-end;
+        }
+        .logo__wp{
+            grid-area: wplogo;
+            align-self: flex-end;
+            justify-self: center;
+        }
+        .logo__ig{
+            grid-area: iglogo;
+            align-self: flex-end;
+            justify-self: center;
+            margin-right: 10px;  
+        }
+    }
+}
+
+@media only screen and ( min-width: 1200px){
+    footer{
+        height: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 0.1fr 0.1fr;
+        grid-template-rows: 100%;
+        grid-template-areas: "copyright textor  wplogo iglogo";
+        column-gap: 10px;
+
+        .parrafo__copyright{
+            height: 30%;
+            width: 150px;
+            font-size: 13px;
+            grid-area: copyright; 
+            align-self: flex-end;
+            justify-self: flex-start;
+            margin-left: 10px;
+        }
+        .titulo__redes{
+            font-size: 20px;
+            grid-area: textor;
+            justify-self: flex-end;
+            align-self: flex-end;
+        }
+        .logo__wp{
+            grid-area: wplogo;
+            align-self: flex-end;
+            justify-self: center;
+        }
+        .logo__ig{
+            grid-area: iglogo;
+            align-self: flex-end;
+            justify-self: center;
+            margin-right: 10px;
+        }
+    }
+}

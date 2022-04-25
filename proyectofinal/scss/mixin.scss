@@ -1,0 +1,31 @@
+/*----------------Mixin Generales---------------------*/
+
+@mixin estiloFondoTitulos {
+    background-color: #70076638;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+@mixin estiloTitulos {
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #443542;
+    margin-bottom: 0;
+    font-weight:bold;
+    line-height: 0;
+}
+
+@mixin tipografiaSucursales {
+    color: black;
+    text-align: center;  
+    font-family: 'Times New Roman', Times, serif
+}
+
+
+
